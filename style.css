@@ -2,18 +2,48 @@
 :root{
     --main-font:'KumbhSans', sans-serif;
     --Dark-cyan: hsl(185, 75%, 39%);
-    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Very-dark-desaturated-blue: hwb(229 20% 38%);
     --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
     min-height: 100vh;
     background-color: var(--Dark-cyan);
     font-family: var(--main-font);
+    font-size: 18px;
 }
-
+.ball-upper{
+    position: absolute;
+    top: -150px;
+    left: -100px;
+    width: 70%;
+}
+.ball-upper img, .ball-lower img{
+    width: 100%;
+}
+.ball-lower{
+    position: absolute;
+    bottom: -150px;
+    right: -80px;
+    width: 70%;
+}
+main{
+    background-color: white;
+    max-width: 300px;
+    border-radius: 15px;
+    z-index: 1;
+}
 img{
     display: block;
 }
@@ -34,21 +64,36 @@ img{
 }
 .perfil-area img{
     border-radius: 50%;
-    border: 3px solid white;
+    border: 4px solid white;
 }
 .text-area{
     text-align: center;
 }
 .name{
     margin-top: 60px;
+    font-weight: 700;
+    font-size: 0.9em;
 }
-
-.counteiner{
-    background-color: white;
-    max-width: 300px;
-    border-radius: 15px;
+.name p {
+    font-size: 0.8em;
+}
+.name span, p{
+    font-weight: normal;
+    color: var(--dark-gray);
+}
+hr{
+    height: 1px;
+    border: 0px;
+    background-color:lightgrey;
+    margin: 20px 0 20px 0;
 }
 .stats-area{
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.stats-area p{
+    font-size: 0.7em;
 }
