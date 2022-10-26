@@ -5,6 +5,14 @@
     --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
     --Dark-grayish-blue: hsl(227, 10%, 46%);
 }
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Dark-cyan);
+    font-family: var(--main-font);
+}
 
 img{
     display: block;
@@ -33,14 +41,6 @@ img{
 }
 .name{
     margin-top: 60px;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: var(--Dark-cyan);
-    font-family: var(--main-font);
 }
 
 .counteiner{
